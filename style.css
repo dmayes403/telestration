@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #019DE3;
+  margin: auto;
+  font-family: 'Russo One', sans-serif;
+}
+
+.header {
+  height: 175px;
+  background: black;
+  /*margin: auto;*/
+  /*padding: 0px 100px;*/
+}
+
+.headerContainer {
+  height: 100%;
+  width: 53%;
+  min-width: 1000px;
+  margin: auto;
+}
+
+.header p {
+  color: yellow;
+  font-size: 42px;
+  float: left;
+  margin-left: 175px;
+  transform: translateY(45%);
+}
+
+.header img {
+  height: 100%;
+  object-fit: cover;
+  width: 250px;
+  /*margin-left: 100px;*/
+  float: left;
+}
+
+.main {
+  margin: auto;
+  width: 53%;
+  text-align: center;
+}
+
+/*.teleSearch {
+  margin-top: 50px;
+  width: 70%;
+  height: 50px;
+  font-size: 24px;
+  padding-left: 25px;
+}
+
+.teleSearchSubmit {
+  height: 50px;
+  border: none;
+  background: black;
+  color: #019DE3;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}*/
+
+.teleSearch {
+  /*margin: auto;*/
+  margin-top: 50px;
+  width: 100%;
+  height: 50px;
+  /*padding-left: 25px;*/
+}
+
+.teleSearchInput {
+  width: 88%;
+  height: 50px;
+  margin-top: 0;
+  font-size: 24px;
+  padding-left: 25px;
+  font-family: 'Russo One', sans-serif;
+}
+
+.teleSearchSubmit {
+  width: 10%;
+  height: 50px;
+  border: none;
+  background: black;
+  color: #019DE3;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+.telePost {
+  position: relative;
+  width: 560px;
+  background: black;
+  border: 10px solid yellow;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 2px 2px 8px black;
+}
+
+.picContent {
+  display: flex;
+}
+
+.telePost img{
+  /*position: absolute;*/
+  top: 20px;
+  right: 25px;
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+  border: none;
+  background: black;
+}
+
+.giphyDataContainer {
+  width: 260px;
+  color: yellow;
+  text-align: left;
+}
+
+.giphyPicContainer {
+  width: 300px;
+}
+
+.rating {
+  font-size: 150%;
+  color: white;
+}
+
+.rating:hover {
+  color: yellow;
+}
+
+.giphyComment {
+  bottom: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 25px;
+  padding: 14px;
+  font-size: 14px;
+}

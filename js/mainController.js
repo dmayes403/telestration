@@ -17,8 +17,8 @@ angular.module('myApp')
         $scope.rando = Math.floor(Math.random()*25)
         mainServ.getData(searchText).then(function(response){
             $scope.giphys = response;
-            console.log($scope.giphys)
-
+            mainServ.makePost($scope.giphys[$scope.rando])
+            $scope.allPostings = mainServ.getPosts();
           }
         )
       }

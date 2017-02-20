@@ -12,7 +12,7 @@
   <header class="header">
     <section class="headerContainer">
       <img src="https://typeset-beta.imgix.net/rehost%2F2016%2F11%2F4%2F2a7ff85b-2acc-4afa-84a6-da14c50e15dd.jpg">
-      <p> Telestration with Giphys! </p>
+      <p> Share a Giphy! </p>
     </section>
   </header>
     <main class="main">
@@ -22,19 +22,34 @@
         <button class="teleSearchSubmit" ng-click="getData(searchText)">Submit</button>
       </form>
       </div> <br /> <br />
-      <!-- <br /><br /><img ng-src="{{giphys[1].images.downsized_large.url}}"> -->
-
-      <section class="telePost">
+      <!-- <section class="telePost">
         <section class="picContent">
           <div class="giphyDataContainer">
-            <p>Uploaded: {{giphys[rando].import_datetime}}</p>
-            <p>Name: {{giphys[rando].slug}}</p>
-            <p>Type: {{giphys[rando].type}}</p>
-            <p>Rating: {{giphys[rando].rating}}</p>
+            <p>Uploaded: {{giphys[rando].Uploaded}}</p>
+            <p>Name: {{giphys[rando].Name}}</p>
+            <p>Type: {{giphys[rando].Type}}</p>
+            <p>Rating: {{giphys[rando].Rating}}</p>
             <p>Reviews:</p>
           </div>
           <div class="giphyPicContainer">
-            <img ng-src="{{giphys[rando].images.downsized_large.url}}">
+            <img ng-src="{{giphys[rando].Image}}">
+            <div class="rating">&starf; &starf; &starf; &starf; &starf;</div>
+          </div>
+        </section>
+        <textarea class="giphyComment" placeholder="Write a comment..."></textarea>
+      </section> -->
+
+      <section class="telePost" ng-repeat="post in allPostings">
+        <section class="picContent">
+          <div class="giphyDataContainer">
+            <p>Uploaded: {{post.Uploaded}}</p>
+            <p>Name: {{post.Name}}</p>
+            <p>Type: {{post.Type}}</p>
+            <p>Rating: {{post.Rating}}</p>
+            <p>Reviews:</p>
+          </div>
+          <div class="giphyPicContainer">
+            <img ng-src="{{post.Image}}">
             <div class="rating">&starf; &starf; &starf; &starf; &starf;</div>
           </div>
         </section>
@@ -43,6 +58,18 @@
 
 
     </main>
+    <footer class="footer">
+      <section class="footerContainer">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTv9Z_4PkxDgCidnn-SE03cakupMBYuBFuL8al2Ad_HVsqCv-um">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTWBan_NTbsAWV59kNuLVQhV3mgdO1Ut7RJz0kPDGYG2Tx-qdA4BQ">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRj1QZqv5UYiNRMw0E74OGvXAzHrOvZ0zBHNtGrrt5XU4RZMxTe8A">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF0zk9_TECbMFdwLfVmHPzC1zogYJUbcWEMi2yOEzDbxTOQdsORg">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTFycaT4jRk9R7qis47IsT3cxWrcowS6zor0Y6MhU0cal1RF6O8PQ">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSW_SwQADLd08_6K_rS-SpMhO7O6BsZn0JSYZ9bQBVxQNWAKunr3g">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT9oUZaBdtylNbKyGJUR2-XSuCSJPQn4-Dx3lMQCmgZDoE3j4i9fQ">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXHX2dsnLTzdFW51C5JATN2gNx6nLuv_B24r278wCVz9GhmcvFmA">
+      </section>
+    </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
   <script src="./js/app.js"></script>

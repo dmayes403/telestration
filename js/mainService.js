@@ -12,7 +12,8 @@ angular.module('myApp')
                 Name: item.slug,
                 Type: item.type,
                 Rating: item.rating,
-                Image: item.images.downsized_large.url
+                Image: item.images.downsized_large.url,
+                Comments: [],
               }
             })
             console.log(finalArr)
@@ -23,7 +24,7 @@ angular.module('myApp')
 
       allPostings = [];
       this.makePost = function(post){
-        allPostings.push(post);
+        allPostings.unshift(post);
         console.log(allPostings);
         localStorage.setItem(1, JSON.stringify(allPostings))
       }

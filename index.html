@@ -18,26 +18,9 @@
     <main class="main">
       <div class="teleSearch">
         <form ng-submit="getData(searchText)">
-        <input class="teleSearchInput" type="text" placeholder="Start the teletration off!" ng-model="searchText">
-        <button class="teleSearchSubmit" ng-click="getData(searchText)">Submit</button>
+        <input class="teleSearchInput" type="text" placeholder="Share a Giphy!" ng-model="searchText">
       </form>
       </div> <br /> <br />
-      <!-- <section class="telePost">
-        <section class="picContent">
-          <div class="giphyDataContainer">
-            <p>Uploaded: {{giphys[rando].Uploaded}}</p>
-            <p>Name: {{giphys[rando].Name}}</p>
-            <p>Type: {{giphys[rando].Type}}</p>
-            <p>Rating: {{giphys[rando].Rating}}</p>
-            <p>Reviews:</p>
-          </div>
-          <div class="giphyPicContainer">
-            <img ng-src="{{giphys[rando].Image}}">
-            <div class="rating">&starf; &starf; &starf; &starf; &starf;</div>
-          </div>
-        </section>
-        <textarea class="giphyComment" placeholder="Write a comment..."></textarea>
-      </section> -->
 
       <section class="telePost" ng-repeat="post in allPostings">
         <section class="picContent">
@@ -53,7 +36,9 @@
             <div class="rating">&starf; &starf; &starf; &starf; &starf;</div>
           </div>
         </section>
-        <textarea class="giphyComment" placeholder="Write a comment..."></textarea>
+        <form ng-submit="addComment(commentText)">
+          <textarea class="giphyComment" placeholder="Write a comment..." ng-model="commentText"></textarea>
+        </form>
       </section>
 
 

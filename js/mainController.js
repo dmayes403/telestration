@@ -22,4 +22,14 @@ angular.module('myApp')
           }
         )
       }
+
+      $scope.addComment = function(commentText, id){
+        mainServ.addComment(commentText, id);
+        $scope.allPostings = mainServ.getPosts();
+      }
+
+      $scope.addReview = function(review, id){
+        mainServ.addReview(review, id);
+        $scope.allPostings = mainServ.getPosts();
+      }
     })

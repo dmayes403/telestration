@@ -129,6 +129,11 @@ body {
   font-size: 14px;
 }
 
+.comments {
+  color: #019DE3;
+  text-align: left;
+}
+
 .footer {
   position: fixed;
   bottom: 0;

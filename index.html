@@ -29,16 +29,20 @@
             <p>Name: {{post.Name}}</p>
             <p>Type: {{post.Type}}</p>
             <p>Rating: {{post.Rating}}</p>
-            <p>Reviews:</p>
+            <p>Reviews: {{post.ReviewTotal/post.ReviewClicks | number: 2}} / 5</p>
           </div>
           <div class="giphyPicContainer">
             <img ng-src="{{post.Image}}">
-            <div class="rating">&starf; &starf; &starf; &starf; &starf;</div>
+            <!-- <div class="rating"><span class="star1">&starf;</span> &starf; &starf; &starf; &starf;</div> -->
+            <div class="rating"><span class="star1" ng-click="addReview(1, post.ID)"> &starf; </span><span class="star2" ng-click="addReview(2, post.ID)"> &starf; </span><span class="star3" ng-click="addReview(3, post.ID)"> &starf; </span><span class="star4" ng-click="addReview(4, post.ID)"> &starf; </span><span class="star5" ng-click="addReview(5, post.ID)">&starf;</span></div>
           </div>
         </section>
-        <form ng-submit="addComment(commentText)">
-          <textarea class="giphyComment" placeholder="Write a comment..." ng-model="commentText"></textarea>
+        <form ng-submit="addComment(commentText, post.ID)">
+          <input class="giphyComment" placeholder="Write a comment..." ng-model="commentText">
         </form>
+        <section class="comments" ng-repeat="comment in post.Comments">
+          <p>{{comment}}</p>
+        </section>
       </section>
 
 
